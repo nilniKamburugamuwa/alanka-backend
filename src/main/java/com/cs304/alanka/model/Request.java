@@ -1,5 +1,7 @@
 package com.cs304.alanka.model;
 
+import java.sql.Date;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -27,14 +29,11 @@ public class Request{
 	private String category;
 	
 	@Column
-	private String image;
-	
-	@Column
-	private String dueDate;
+	private Date dueDate;
 
 	public Request() {}
 	public Request(Long id, String title, String description, float budget, int quantity, String category, String image,
-			String dueDate) {
+			Date dueDate) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -42,7 +41,6 @@ public class Request{
 		this.budget = budget;
 		this.quantity = quantity;
 		this.category = category;
-		this.image = image;
 		this.dueDate = dueDate;
 	}
 
@@ -94,19 +92,13 @@ public class Request{
 		this.category = category;
 	}
 
-	public String getImage() {
-		return image;
-	}
 
-	public void setImage(String image) {
-		this.image = image;
-	}
 
-	public String getDueDate() {
+	public Date getDueDate() {
 		return dueDate;
 	}
 
-	public void setDueDate(String dueDate) {
+	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
 	}
 	

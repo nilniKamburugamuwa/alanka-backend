@@ -29,7 +29,8 @@ public class Product{
 	@Column
 	private String category;
 	
-	@Column
+	@Lob
+	@Column(columnDefinition = "MEDIUMBLOB")
 	private String image;
 	
 	
